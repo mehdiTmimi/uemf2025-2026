@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Manager — CSS only</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Student Manager</h1>
+      <p class="lead">Add students (CIN, name, birthdate) and view the full list — responsive, no JavaScript.</p>
+    </div>
+  </header>
+
+  <main class="container app" role="main">
+    <!-- Form column -->
+    <section class="card form-card" aria-labelledby="form-title">
+      <h2 id="form-title">Insert new student</h2>
+
+      <form action="#" method="get" class="student-form" novalidate>
+        <div class="form-row">
+          <label for="cin">CIN</label>
+          <input id="cin" name="cin" type="text" inputmode="numeric" pattern="[0-9A-Za-z-]+" required placeholder="e.g. AB123456" />
+        </div>
+
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="e.g. Sara Ali" />
+        </div>
+
+        <div class="form-row">
+          <label for="birthdate">Birthdate</label>
+          <input id="birthdate" name="birthdate" type="date" required />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Add student</button>
+          <button type="reset" class="btn">Reset</button>
+        </div>
+
+        <p class="hint">Note: This template is UI-only. To persist students you can add a small script or wire the form to a backend.</p>
+      </form>
+    </section>
+
+    <!-- List column -->
+    <section class="card list-card" aria-labelledby="list-title">
+      <h2 id="list-title">Student List</h2>
+
+      <div class="table-wrap">
+        <table class="student-table" aria-describedby="list-desc">
+          <caption id="list-desc">All registered students</caption>
+          <thead>
+            <tr>
+              <th scope="col">CIN</th>
+              <th scope="col">Name</th>
+              <th scope="col">Birthdate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="CIN">AB123456</td>
+              <td data-label="Name">Sara Ali</td>
+              <td data-label="Birthdate">1998-04-12</td>
+            </tr>
+            <tr>
+              <td data-label="CIN">CD987654</td>
+              <td data-label="Name">Omar Ben</td>
+              <td data-label="Birthdate">2000-11-03</td>
+            </tr>
+            <tr>
+              <td data-label="CIN">EF456789</td>
+              <td data-label="Name">Lina Haddad</td>
+              <td data-label="Birthdate">1999-07-22</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="list-footer">
+        <p class="muted">Showing <strong>3</strong> students (sample data). Add real entries by wiring the form to a backend or JS.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Student Manager — HTML &amp; CSS only • Responsive layout</small>
+    </div>
+  </footer>
+</body>
+</html>
